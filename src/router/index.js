@@ -1,8 +1,21 @@
+import Home from '@/views/Home.vue'
+import SerieDetail from '@/views/SerieDetail.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  routes: [
+    {
+        path: "/",
+        name: "home",
+        component: Home
+    },
+    {
+        path: 'shows/:id',
+        name: 'serie-detail',
+        component: SerieDetail
+    }
+  ],
 })
 
 export default router
