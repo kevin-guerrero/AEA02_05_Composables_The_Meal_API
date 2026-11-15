@@ -8,7 +8,8 @@
     <article>
         <RouterLink :to="{ name: 'serie-detail', params: { id: props.serie.id } }">
             <img
-                :src="props.serie.image.original"
+                v-if="props.serie.image?.original || props.serie.image?.medium"
+                :src="props.serie.image.original || props.serie.image.medium"
                 :alt="`Pòster de ${props.serie.name}`"
             >
             <h2>{{ props.serie.name }}</h2>
