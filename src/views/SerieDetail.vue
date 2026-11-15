@@ -54,3 +54,37 @@
 
         </article>
 </template>
+
+<style scoped>
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #e0e2e6;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+}
+
+article > img {
+    display: block;
+    max-width: 300px;
+    max-height: 440px;
+    margin: 1.5rem auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+article > div {
+    line-height: 1.6;
+}
+
+section {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+</style>

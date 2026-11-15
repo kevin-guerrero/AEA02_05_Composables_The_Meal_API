@@ -7,4 +7,19 @@
     <RouterView></RouterView>
 </template>
 
-<style scoped></style>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f5f7;
+    color: #242424;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+</style>

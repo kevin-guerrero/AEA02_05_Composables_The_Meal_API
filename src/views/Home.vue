@@ -37,13 +37,12 @@
 
 <template>
     <main>
-        <h1>Buscar series</h1>
         <SearchBar @buscar="buscarSeries"></SearchBar>
 
         <p v-if="loading">Buscando...</p>
         <p v-else-if="error">Error al cargar las series: {{ error.message }}</p>
 
-        <section v-else>
+        <section v-else class="series-grid">
             <SerieCard
                 v-for="serie in series"
                 :key="serie.id"
@@ -52,3 +51,23 @@
         </section>
     </main>
 </template>
+
+<style scoped>
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+</style>
